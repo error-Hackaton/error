@@ -32,7 +32,7 @@ def przewidywanie_wstrzasu(obserwacja, t):
     cechy = obserwacja[historia.columns]
     historia = historia.append(cechy)
     obserwacja = obserwacja[historia.columns].drop('czas', axis = 1)
-    przewidywanie = (model.predict_proba(obserwacja)[:,1]>= 0.00291109)
+    przewidywanie = (model.predict_proba(obserwacja)[:,1]>= 0.00291996)
     if przewidywanie:
         przewidywanie = 1
     else:

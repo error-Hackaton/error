@@ -61,6 +61,7 @@ jakosc1 = inne.roc_auc(ml, pred_ucz, cel_ucz, pred_test, cel_test)
 jakosc1.krzywaROC()'''
 
 '''Model oparty o maszynę wektorów nośnych'''
+####Niestety pojawił się poroblem z poszukiwaniem hiperparametrów więc klasyfikator będzie się uczył na bazowych ustawieniach
 wektory = svm.SVC()
 wektory.fit(pred_ucz, cel_ucz)
 wektory = CalibratedClassifierCV(wektory)
